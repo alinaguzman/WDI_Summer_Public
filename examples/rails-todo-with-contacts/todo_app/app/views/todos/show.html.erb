@@ -17,8 +17,7 @@
   <% @available_contacts.each do |contact| %>
   <p>
     <%= render partial: contact %>
-    <%= button_to "Assign Contact",
-      add_todo_contact_path(contact_id: contact.id) %>
+    <%= button_to "Assign Contact",add_todo_contact_path(contact_id: contact.id) %>
   </p>
   <% end %>
 
