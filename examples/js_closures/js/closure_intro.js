@@ -11,8 +11,9 @@ function handleStudents(){
 }
 
 // What type of variable is nextStudent?
-// t: ???    ITS A CLOSURE  aka a reference to a function
-var nextStudent = handleStudents();   // this returns a string of the students name   //handleStudents returns a function that returns the next student
+
+// t: ???
+var nextStudent = handleStudents(); 
 var nextStudent1 = handleStudents();
 
 // onload
@@ -22,6 +23,11 @@ window.onload = function(){
     document.getElementById('students').innerHTML += nextStudent() + '<br/>\n';
     document.getElementById('students').innerHTML += nextStudent1() + '<br/>\n';
 
+  };
+
+    // Adding an event handler to our addStudent button
+  document.getElementById("addStudent1").onclick = function(){
+    document.getElementById('students').innerHTML += nextStudent1() + '<br/>\n';
   };
 
   document.getElementById("clearStudents").onclick = function(){
